@@ -1,10 +1,10 @@
 import { getAbbrTimeZone } from './deviceUtils';
 import { getToken } from './storageUtils';
 
-const ALL_USERS_URL = (page, paginate) => `https://api.alkaysan.co.id/v2/account/user/get/all?paginate=${paginate}&page=${page}`;
-const UPDATE_URL = (id) => `https://api.alkaysan.co.id/v2/account/user/update/${id}`;
-const PROFILE_URL = "https://api.alkaysan.co.id/v2/account/user/get/me";
-const ATTENDANCE_URL = "https://api.alkaysan.co.id/v2/account/attendance/add";
+const ALL_USERS_URL = (page, paginate) => `https://api.alkaysan.com/v2/account/user/get/all?paginate=${paginate}&page=${page}`;
+const UPDATE_URL = (id) => `https://api.alkaysan.com/v2/account/user/update/${id}`;
+const PROFILE_URL = "https://api.alkaysan.com/v2/account/user/get/me";
+const ATTENDANCE_URL = "https://api.alkaysan.com/v2/account/attendance/add";
 
 export const fetchUserProfile = async () => {
     const token = getToken();
@@ -205,7 +205,7 @@ export const verifyQrCode = async (secretKey) => {
     const formData = new FormData();
     formData.append('key', secretKey);
 
-    const response = await fetch("https://api.alkaysan.co.id/v2/account/attendance/verify-qr", {
+    const response = await fetch("https://api.alkaysan.com/v2/account/attendance/verify-qr", {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,

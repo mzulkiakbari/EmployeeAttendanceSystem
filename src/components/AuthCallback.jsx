@@ -18,7 +18,7 @@ const AuthCallback = ({ onAuthComplete }) => {
 
                     // Exchange authorization code for access token
                     const tokenRes = await fetch(
-                        "https://account.alkaysan.co.id/oauth/token",
+                        "https://account.alkaysan.com/oauth/token",
                         {
                             method: "POST",
                             headers: {

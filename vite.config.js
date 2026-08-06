@@ -10,7 +10,7 @@ export default defineConfig({
     host: true,
     proxy: {
       '/oauth': {
-        target: 'https://account.alkaysan.co.id',
+        target: 'https://account.alkaysan.com',
         changeOrigin: true,
         secure: false,
       }
